@@ -74,7 +74,7 @@ const glass = {
 
 // object destructure
 
-const {price, color, brand, phone}=glass;
+const {price, color, phone}=glass;
 // console.log(glass)
 // console.log(price)
 // console.log(color)
@@ -89,12 +89,36 @@ const [first, second]=numbers;
 
 const [x,y]=[12, 66];
 
-console.log(x);
-console.log(y);
+// console.log(x);
+// console.log(y);
 
 function doubleThem(a,b){
     return [a*2, b*2];
 }
 
 const [prothom, ditiyo]= doubleThem(6,9);
-console.log(prothom, ditiyo);
+// console.log(prothom, ditiyo);
+
+const laptop={
+    brand:'hp',
+    color:'golden',
+    price:'42000',
+    processore:'corei5'
+}
+
+// console.log(laptop);
+
+const keys = Object.keys(glass);
+// console.log(keys);
+const values= Object.values(glass);
+// console.log(values);
+
+const pair = Object.entries(glass);
+// console.log(pair);
+// delete laptop.brand;
+// console.log(laptop);
+const { brand, ...other}=laptop;
+console.log(other);
+Object.seal(laptop);
+laptop.source = 'China';
+console.log(laptop);
