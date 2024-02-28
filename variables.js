@@ -37,9 +37,18 @@ const result2 =`${a} and ${b} and ${c}`;
 console.log(result2);
 
 // arrow function
-function add(b,b){
-    result= a+b;
+function add(a,b){
+    const result= a+b;
     return result;
 }
 
-// 
+console.log(add(5,3))
+const add4 = function(a,b){
+    return a+b;
+}
+
+console.log(add4(20,31))
+
+const add3 = (a,b)=>a+b
+
+console.log(add3(42,8));
